@@ -1373,40 +1373,105 @@
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
+
+    /* Fix all sections to full width */
+    body { overflow-x: hidden; }
+
+    /* Reduce section padding on mobile */
+    #changing, #why, #jane-story, #team,
+    #different, #eight-days, #what-possible,
+    #you-return, #testimonials, #portugal, #waitlist {
+      padding: 3.5rem 5%;
+    }
+    #intention { padding: 2.5rem 5%; }
+    .cta-dark-band { padding: 2.5rem 5%; }
+
+    /* Stack all two-column grids */
     .split-layout,
     .why-grid,
     .team-grid,
     .walking-inner,
     .different-grid,
     .portugal-inner,
-    .final-cta-inner { grid-template-columns: 1fr; }
+    .final-cta-inner {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
 
     .split-layout.reverse { direction: ltr; }
 
+    /* Images in stacked layouts */
     .split-img,
     .why-img,
     .walking-photo,
     .different-img,
-    .portugal-photo { aspect-ratio: 16/9; min-height: 300px; }
+    .portugal-photo {
+      aspect-ratio: 4/3;
+      min-height: 260px;
+      width: 100%;
+    }
 
+    /* Section-specific text padding */
+    .walking-text { padding: 2.5rem 5%; }
+    .portugal-text { padding: 2.5rem 5%; }
+
+    /* Card grids: single column */
     .day-cards,
     .possible-cards,
     .return-cards,
-    .mini-quotes { grid-template-columns: 1fr; }
+    .mini-quotes {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
 
     .details-grid { grid-template-columns: 1fr; }
-    .specs-inner { grid-template-columns: repeat(2, 1fr); }
+    .specs-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .four-pillars { grid-template-columns: 1fr; }
     .pillar:nth-child(odd) { border-right: none; padding-right: 0; }
     .pillar:nth-child(even) { padding-left: 0; }
 
+    /* Hero */
     .hero-content { padding: 2rem 5%; text-align: left; }
     .hero-meta { justify-content: flex-start; }
     .hero-divider { margin-left: 0; }
     .hero-sub { margin-left: 0; }
 
-    .final-cta-photo { aspect-ratio: 16/9; position: relative; min-height: 300px; }
+    /* Full bleed images */
+    .full-bleed { height: 55vw; min-height: 280px; }
+
+    /* Final CTA */
+    .final-cta-photo { aspect-ratio: 4/3; position: relative; min-height: 260px; width: 100%; }
     .final-cta-photo img { position: absolute; }
+    .final-cta-text { background: var(--charcoal); padding: 3rem 5%; }
+
+    /* Misc */
+    .story-photo { aspect-ratio: 4/3; }
+    .team-member .member-photo { aspect-ratio: 1/1; }
+    .featured-quote { padding: 2rem; }
+    .possible-photo { aspect-ratio: 4/3; }
+    .return-photo { aspect-ratio: 4/3; }
+    .team-closing { margin-top: 3rem; }
+    hr.full { margin: 2rem 0; }
+    .story-inner { padding: 0; }
+
+    /* Ensure coloured background sections always go edge to edge */
+    #you-return .return-cards,
+    #you-return .return-photo,
+    #testimonials .featured-quote,
+    #testimonials .mini-quotes,
+    #testimonials .testimonials-cta {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .specs-bar { width: 100%; box-sizing: border-box; }
+    .specs-inner { max-width: 100%; }
+
+    /* Remove right-side gap on dark/sage sections */
+    #you-return, #testimonials, .cta-dark-band, .specs-bar {
+      box-sizing: border-box;
+      width: 100%;
+    }
   }
 </style>
 </head>
