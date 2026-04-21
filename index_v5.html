@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This is your time. — Portugal Retreat, October 2026</title>
+<meta name="description" content="Eight days walking in Portugal — to step back, hear yourself, and choose what comes next. A small-group retreat for women at a turning point.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f5f0e8;
+    --parchment-dark: #ede8de;
+    --sage: #6b7a5a;
+    --sage-dark: #5a6849;
+    --charcoal: #2d2d2d;
+    --gold: #b5924a;
+    --text-dark: #2a2520;
+    --text-mid: #4a453e;
+    --text-light: #7a7268;
+    --divider: #c8bfb0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-dark);
+    background: var(--parchment);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.15; }
+
+  /* ── Consistent uppercase label style ── */
+  .label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+  }
+
+  .label-light { color: rgba(255,255,255,0.55); }
+  .label-sage  { color: rgba(255,255,255,0.55); }
+
+  .gold-rule {
+    width: 36px; height: 1px;
+    background: var(--gold);
+    display: block;
+  }
+
+  hr.section-rule {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: 2.5rem 0;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    padding: 0.85rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-white  { border: 1px solid rgba(255,255,255,0.8); color: #fff; background: transparent; }
+  .btn-white:hover { background: rgba(255,255,255,0.15); }
+  .btn-dark   { border: 1px solid var(--text-dark); color: var(--text-dark); background: transparent; }
+  .btn-dark:hover { background: var(--text-dark); color: var(--parchment); }
+  .btn-light  { border: 1px solid rgba(255,255,255,0.55); color: rgba(255,255,255,0.9); background: transparent; }
+  .btn-light:hover { background: rgba(255,255,255,0.12); }
+
+  /* ══════════════════════════════
+     1. HERO
+  ══════════════════════════════ */
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('Golden hour in the vineyard.png') center/cover no-repeat;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, rgba(20,16,10,0.5) 30%, transparent 70%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    padding: 3rem 5% 3rem 40%;
+    color: #fff;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  .hero-meta .dash { width: 28px; height: 1px; background: rgba(255,255,255,0.7); }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  .hero-rule { width: 40px; height: 1px; background: rgba(255,255,255,0.6); margin: 1.5rem 0 1.5rem auto; }
+  .hero-sub {
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.95);
+    max-width: 360px;
+    margin: 0 auto 2.5rem;
+  }
+  .hero-footnote { margin-top: 1rem; font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
+
+  /* ══════════════════════════════
+     2. SOMETHING IS CHANGING
+  ══════════════════════════════ */
+  #changing {
+    background: var(--parchment);
+    padding: 4rem 5%;
+  }
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .split-text h2 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 1.75rem;
+    color: var(--text-dark);
+  }
+  .split-text p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 0.75rem;
+  }
+  .split-text p strong { font-weight: 500; color: var(--text-dark); }
+  .split-text .closing {
+    margin-top: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+  }
+  .split-img { border-radius: 2px; overflow: hidden; aspect-ratio: 3/4; }
+  .split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ══════════════════════════════
+     3. ON YOUR OWN TERMS (green)
+  ══════════════════════════════ */
+  #intention {
+    background: var(--sage);
+    padding: 3.5rem 5%;
+    text-align: center;
+  }
+  #intention .label { margin-bottom: 1.5rem; color: rgba(255,255,255,0.6); }
+  #intention h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    max-width: 700px;
+    margin: 0 auto 1.75rem;
+    color: #fff;
+  }
+  #intention p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    max-width: 640px;
+    margin: 0 auto 1rem;
+    color: rgba(255,255,255,0.82);
+  }
+  #intention .pull-quote {
+    margin: 2rem auto;
+    max-width: 560px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  /* ══════════════════════════════
+     4. WHY I CREATED THIS
+  ══════════════════════════════ */
+  #why {
+    background: #e8e0d0;
+    padding: 5rem 5%;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .why-img { border-radius: 2px; overflow: hidden; aspect-ratio: 4/5; }
+  .why-img img { width: 100%; height: 100%; object-fit: cover; }
+  .why-text .label { margin-bottom: 1rem; }
+  .why-text h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1.5rem; color: var(--text-dark); }
+  .why-text p { font-size: 0.95rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 1rem; }
+  .why-text p em { font-style: italic; }
+  .blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+  }
+  .four-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--divider);
+  }
+  .pillar { padding: 1.25rem 0; border-bottom: 1px solid var(--divider); }
+  .pillar:nth-child(odd) { border-right: 1px solid var(--divider); padding-right: 1.5rem; }
+  .pillar:nth-child(even) { padding-left: 1.5rem; }
+  .pillar .label { margin-bottom: 0.5rem; }
+  .pillar p { font-size: 0.9rem; line-height: 1.5; color: var(--text-mid); margin: 0; }
+  .why-closing {
+    margin-top: 2.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+    font-weight: 500;
+    border-top: 1px solid var(--divider);
+    padding-top: 1.75rem;
+  }
+
+  /* ══════════════════════════════
+     5. A NOTE FROM JANE
+  ══════════════════════════════ */
+  #jane-story {
+    background: var(--parchment);
+    padding: 5rem 5%;
+  }
+  .story-inner { max-width: 680px; margin: 0 auto; }
+  .story-inner .label { margin-bottom: 1.5rem; text-align: center; }
+  .story-inner h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.25;
+    color: var(--text-dark);
+  }
+  .story-inner p { font-size: 0.95rem; line-height: 1.9; color: var(--text-mid); margin-bottom: 1.1rem; }
+  .story-inner hr { border: none; border-top: 1px solid var(--divider); margin: 2rem 0; }
+  .story-pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  .story-pull-emphasis {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.55rem;
+    text-align: center;
+    color: var(--text-dark);
+    line-height: 1.55;
+    font-weight: 500;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+    padding: 2rem 0;
+    margin: 2rem 0;
+  }
+  .story-photo {
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 2.5rem 0;
+    aspect-ratio: 16/9;
+  }
+  .story-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  .story-sign { margin-top: 2.5rem; text-align: center; }
+  .story-sign hr { border: none; border-top: 1px solid var(--divider); margin: 0 auto 1.5rem; max-width: 200px; }
+  .story-sign .cursive {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+  }
+  .story-sign .attribution {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* ══════════════════════════════
+     6. THIS STORY IS WHY (dark band)
+  ══════════════════════════════ */
+  .cta-dark-band {
+    background: var(--charcoal);
+    padding: 3.5rem 5%;
+    text-align: center;
+  }
+  .cta-dark-band p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.92);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* ══════════════════════════════
+     7. THE TEAM
+  ══════════════════════════════ */
+  #team {
+    background: var(--parchment);
+    padding: 5rem 5%;
+  }
+  #team .label { text-align: center; margin-bottom: 1rem; }
+  #team .team-intro {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--text-dark);
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .team-member .member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+  }
+  .team-member .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .team-member h3 { font-size: 1.5rem; margin-bottom: 0.2rem; color: var(--text-dark); }
+  .team-member .member-title {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    display: block;
+  }
+  .team-member p { font-size: 0.9rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 0.75rem; }
+  .what-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    display: block;
+    border-top: 1px solid var(--divider);
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .sub-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  .team-closing {
+    max-width: 760px;
+    margin: 4rem auto 0;
+    text-align: center;
+    border-top: 1px solid var(--divider);
+    padding-top: 2.5rem;
+  }
+  .team-closing p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.5rem; }
+  .team-closing .sub { font-size: 0.9rem; color: var(--text-mid); font-weight: 300; }
+
+  /* ══════════════════════════════
+     8. WHY WALKING (full bleed photo)
+  ══════════════════════════════ */
+  #walking {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+  }
+  .walking-photo-full {
+    position: absolute;
+    inset: 0;
+  }
+  .walking-photo-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .walking-photo-full::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.0) 62%, rgba(245,240,232,0.96) 76%, rgba(245,240,232,1.0) 100%);
+  }
+  .walking-text {
+    position: relative;
+    z-index: 2;
+    padding: 5rem 4% 5rem 72%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .walking-text h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1.5rem; color: var(--text-dark); }
+  .walking-text p { font-size: 0.95rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 1rem; }
+  .walking-text p strong { font-weight: 500; color: var(--text-dark); }
+  .walking-text p em { font-style: italic; }
+
+  /* ══════════════════════════════
+     9. MORE THAN REFLECTION
+  ══════════════════════════════ */
+  #different {
+    background: var(--parchment);
+    padding: 5rem 5%;
+  }
+  #different .label { text-align: center; margin-bottom: 1rem; }
+  #different > h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
+    color: var(--text-dark);
+  }
+  .different-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .different-img { border-radius: 2px; overflow: hidden; aspect-ratio: 4/5; }
+  .different-img img { width: 100%; height: 100%; object-fit: cover; }
+  .different-text p { font-size: 0.95rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 1rem; }
+  .happiness-plan {
+    margin: 4rem auto 0;
+    text-align: center;
+    max-width: 600px;
+    padding: 2.5rem;
+    border: 1px solid var(--divider);
+    background: var(--parchment-dark);
+    border-radius: 2px;
+  }
+  .happiness-plan p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.45;
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  /* ══════════════════════════════
+     10. WHAT EIGHT DAYS LOOKS LIKE
+  ══════════════════════════════ */
+  #eight-days {
+    background: var(--parchment);
+    padding: 5rem 5%;
+  }
+  #eight-days .label { text-align: center; margin-bottom: 1.5rem; }
+  #eight-days > h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    line-height: 1.4;
+    color: var(--text-dark);
+  }
+  .before-arrival {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    border: 1px solid var(--divider);
+    border-radius: 2px;
+  }
+  .before-arrival h3 { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.75rem; color: var(--text-dark); }
+  .before-arrival p { font-size: 0.9rem; line-height: 1.8; color: var(--text-mid); }
+
+  .day-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+  }
+  .day-card {
+    background: var(--parchment-dark);
+    border: 1px solid var(--divider);
+    padding: 2rem;
+    border-radius: 2px;
+  }
+  .day-card .card-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .day-card h3 { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-dark); }
+  .day-card p { font-size: 0.875rem; line-height: 1.8; color: var(--text-mid); }
+
+  /* Structured but not rigid — below cards */
+  .structured-note {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .structured-note h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+  .structured-note p { font-size: 0.9rem; line-height: 1.8; color: var(--text-mid); }
+
+  hr.section-rule { border: none; border-top: 1px solid var(--divider); margin: 2.5rem 0; max-width: 900px; margin-left: auto; margin-right: auto; }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+  .detail-item .detail-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .detail-item p { font-size: 0.875rem; line-height: 1.75; color: var(--text-mid); }
+
+  .testimonial-block {
+    max-width: 680px;
+    margin: 2rem auto 0;
+    background: var(--parchment-dark);
+    border: 1px solid var(--divider);
+    padding: 2.5rem;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .testimonial-block .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  .testimonial-block .quote-attr { font-size: 0.75rem; color: var(--text-light); }
+
+  /* ══════════════════════════════
+     11. SPACE TO THINK (full bleed terrace)
+  ══════════════════════════════ */
+  #space-to-think {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 500px;
+    overflow: hidden;
+  }
+  #space-to-think img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .space-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15,12,8,0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .space-overlay h2 {
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.15;
+  }
+  .space-overlay p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 1rem;
+  }
+
+  /* ══════════════════════════════
+     12. CLARITY. ENERGY. PERMISSION.
+  ══════════════════════════════ */
+  #what-possible {
+    background: #ebe5dc;
+    padding: 5rem 0 5rem;
+  }
+  #what-possible .label { text-align: center; margin-bottom: 1rem; padding: 0 5%; }
+  #what-possible > h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    padding: 0 5%;
+  }
+  #what-possible .sub-head {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    max-width: 520px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    padding: 0 5%;
+  }
+  .possible-photo {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 3rem;
+    overflow: hidden;
+    aspect-ratio: 16/8;
+  }
+  .possible-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .possible-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 0 5%;
+  }
+  .possible-card {
+    background: #f5f0e8;
+    border: 1px solid var(--divider);
+    padding: 2rem;
+    border-radius: 2px;
+  }
+  .possible-card .card-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .possible-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--text-dark); line-height: 1.25; }
+  .possible-card p { font-size: 0.875rem; line-height: 1.8; color: var(--text-mid); }
+  .possible-card p strong { font-weight: 500; color: var(--text-dark); }
+  .possible-closing {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+  .possible-closing p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.55;
+    color: var(--text-dark);
+  }
+  .possible-closing p strong { font-weight: 600; font-style: normal; }
+
+  /* ══════════════════════════════
+     13. YOU RETURN (sage)
+  ══════════════════════════════ */
+  #you-return {
+    background: var(--sage);
+    padding: 5rem 5%;
+  }
+  #you-return .label { color: rgba(255,255,255,0.55); text-align: center; margin-bottom: 1rem; }
+  #you-return h2 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); text-align: center; margin-bottom: 0.5rem; }
+  #you-return .sub { color: rgba(255,255,255,0.8); text-align: center; font-size: 0.95rem; margin-bottom: 3rem; line-height: 1.6; }
+  .return-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+  }
+  .return-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 2rem;
+    border-radius: 2px;
+  }
+  .return-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.3);
+    display: block;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+  }
+  .return-card h3 { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.9rem; color: #fff; margin-bottom: 0.75rem; }
+  .return-card p { font-size: 0.85rem; line-height: 1.75; color: rgba(255,255,255,0.75); }
+  .return-photo { width: 100%; max-width: 1000px; margin: 0 auto 2.5rem; border-radius: 2px; overflow: hidden; aspect-ratio: 16/7; }
+  .return-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ══════════════════════════════
+     14. FROM WOMEN WHO'VE BEEN IN THE ROOM
+  ══════════════════════════════ */
+  #testimonials {
+    background: var(--parchment);
+    padding: 5rem 5%;
+  }
+  #testimonials .label { text-align: center; margin-bottom: 2rem; }
+  .featured-quote {
+    background: #d8d0c4;
+    border: 1px solid #c0b8ac;
+    border-radius: 2px;
+    padding: 3rem;
+    max-width: 840px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+  }
+  .methodology-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    background: rgba(255,255,255,0.55);
+    border: 1px solid var(--divider);
+    border-radius: 50px;
+    padding: 0.35rem 0.85rem;
+  }
+  .featured-quote::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.25;
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    line-height: 1;
+  }
+  .featured-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+  .featured-quote .attr { display: flex; align-items: center; gap: 0.75rem; }
+  .attr-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .attr-name { font-size: 0.85rem; color: var(--text-dark); }
+  .attr-role { font-size: 0.7rem; color: var(--text-light); }
+  .mini-quotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+  }
+  .mini-quote {
+    background: var(--parchment-dark);
+    border: 1px solid var(--divider);
+    border-radius: 2px;
+    padding: 1.75rem;
+  }
+  .mini-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
+  }
+  .mini-quote .attr { display: flex; align-items: center; gap: 0.6rem; border-top: 1px solid var(--divider); padding-top: 1rem; }
+  .mini-quote .attr-avatar { width: 28px; height: 28px; font-size: 0.8rem; background: var(--gold); opacity: 0.7; }
+  .mini-quote .attr-name { color: var(--text-dark); }
+  .testimonials-cta {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .testimonials-cta p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--text-mid); margin-bottom: 2rem; line-height: 1.7; }
+
+  /* ══════════════════════════════
+     15. THIS IS WHERE EIGHT DAYS BEGINS (full bleed Lisbon)
+  ══════════════════════════════ */
+  #lisbon {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 500px;
+    overflow: hidden;
+  }
+  #lisbon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lisbon-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15,12,8,0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .lisbon-overlay h2 { color: #fff; font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; }
+  .lisbon-overlay p { color: rgba(255,255,255,0.8); font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 400; }
+
+  /* ══════════════════════════════
+     16. PORTUGAL IS A COUNTRY (green)
+  ══════════════════════════════ */
+  #portugal {
+    background: var(--sage);
+    padding: 5rem 5%;
+  }
+  .portugal-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .portugal-text h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-style: italic;
+  }
+  .portugal-text p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.82); margin-bottom: 1rem; }
+
+  /* ══════════════════════════════
+     17. YOU'VE READ THIS FAR (full bleed)
+  ══════════════════════════════ */
+  #final-cta {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    overflow: hidden;
+  }
+  .final-cta-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .final-cta-bg img { width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+  .final-cta-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(15,12,8,0.92) 0%, rgba(15,12,8,0.85) 30%, rgba(15,12,8,0.5) 52%, rgba(15,12,8,0.0) 68%);
+  }
+  .final-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+    margin: 0;
+    padding: 6rem 0 6rem 6%;
+    text-align: left;
+    color: #fff;
+  }
+  .final-cta-content .label { color: rgba(255,255,255,0.5); text-align: left; margin-bottom: 1.5rem; }
+  .final-cta-content h2 { font-size: clamp(2.5rem, 5vw, 4rem); color: #fff; margin-bottom: 2rem; line-height: 1.1; }
+  .final-cta-content .body-italic {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    border-left: 2px solid rgba(255,255,255,0.35);
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .final-cta-content .body-normal { font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.8; margin-bottom: 2.5rem; }
+  .final-cta-content .footnote { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 0.75rem; line-height: 1.6; }
+
+  /* ══════════════════════════════
+     18. WAITLIST SECTION
+  ══════════════════════════════ */
+  #waitlist {
+    background: var(--parchment);
+    padding: 4rem 5%;
+    text-align: center;
+  }
+  #waitlist .label { margin-bottom: 1rem; }
+  #waitlist h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    max-width: 700px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.15;
+    color: var(--text-dark);
+  }
+  #waitlist .sub {
+    font-size: 0.95rem;
+    max-width: 540px;
+    margin: 0 auto 2rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+  #waitlist .no-ob { font-size: 0.8rem; color: var(--text-light); margin-top: 0.75rem; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+
+  /* ══════════════════════════════
+     FAQ SECTION
+  ══════════════════════════════ */
+  #faq {
+    background: var(--parchment-dark);
+    padding: 5rem 5%;
+  }
+  #faq .label { text-align: center; margin-bottom: 1rem; }
+  #faq > h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+  .faq-intro {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    max-width: 540px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.75;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid var(--divider);
+    border-left: 1px solid var(--divider);
+  }
+  .faq-item {
+    padding: 2.25rem 2.5rem;
+    border-right: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+  }
+  .faq-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .faq-item p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 0.75rem;
+  }
+  .faq-item p:last-child { margin-bottom: 0; }
+  .faq-item p em { font-style: italic; color: var(--text-dark); }
+  .faq-item-full {
+    grid-column: 1 / -1;
+    padding: 2.25rem 2.5rem;
+    border-right: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+  }
+  .faq-item-full h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .faq-item-full p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 0.75rem;
+    max-width: 800px;
+  }
+  .faq-item-full p:last-child { margin-bottom: 0; }
+  .faq-item-full p em { font-style: italic; color: var(--text-dark); }
+  .faq-lystra-note {
+    font-size: 0.88rem;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-dark);
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ══════════════════════════════
+     19. SPECS BAR + FOOTER
+  ══════════════════════════════ */
+  .specs-bar { background: var(--charcoal); padding: 2rem 5%; }
+  .specs-inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .spec-item .spec-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 500; display: block; margin-bottom: 0.35rem; }
+  .spec-item .spec-value { font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 300; }
+
+  /* ══════════════════════════════
+     19b. FULL DETAILS FOOTER BAND
+  ══════════════════════════════ */
+  .footer-band {
+    background: var(--parchment);
+    padding: 2rem 5%;
+    text-align: center;
+    border-top: 1px solid var(--divider);
+  }
+  .footer-band p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  .footer-band .byline {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+  }
+
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
+  @media (max-width: 900px) {
+    body { overflow-x: hidden; }
+
+    #changing, #why, #jane-story, #team,
+    #different, #eight-days, #what-possible,
+    #you-return, #testimonials, #portugal,
+    #waitlist { padding: 3rem 5%; }
+
+    #intention { padding: 2.5rem 5%; }
+    .cta-dark-band { padding: 2.5rem 5%; }
+
+    .split-layout, .why-grid, .team-grid,
+    .different-grid, .portugal-inner { grid-template-columns: 1fr; }
+
+    .split-layout.reverse { direction: ltr; }
+
+    .split-img, .why-img, .different-img,
+    .portugal-photo { aspect-ratio: 4/3; width: 100%; }
+
+    /* Walking — stack on mobile */
+    #walking { min-height: auto; }
+    .walking-photo-full { position: relative; height: 300px; }
+    .walking-photo-full::after { display: none; }
+    .walking-text {
+      position: relative;
+      padding: 2.5rem 5%;
+      background: var(--parchment);
+      min-height: auto;
+      color: var(--text-dark);
+    }
+    .walking-text h2 { color: var(--text-dark); }
+    .walking-text p { color: var(--text-mid); }
+
+    .day-cards, .possible-cards, .return-cards, .mini-quotes { grid-template-columns: 1fr; }
+    .possible-cards { padding: 0 5%; }
+    .possible-closing { padding: 0 5%; }
+    #what-possible > h2 { padding: 0 5%; }
+    #what-possible .sub-head { padding: 0 5%; }
+    #what-possible .label { padding: 0 5%; }
+    .details-grid { grid-template-columns: 1fr; }
+    .specs-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .four-pillars { grid-template-columns: 1fr; }
+    .pillar:nth-child(odd) { border-right: none; padding-right: 0; }
+    .pillar:nth-child(even) { padding-left: 0; }
+    .faq-grid { grid-template-columns: 1fr; border-left: none; }
+    .faq-item { border-right: none; padding: 1.75rem 0; }
+    .faq-item-full { border-right: none; padding: 1.75rem 0; }
+    #photo-trio > div { grid-template-columns: 1fr !important; }
+
+    .hero-content { padding: 2rem 5%; text-align: left; }
+    .hero-meta { justify-content: flex-start; }
+    .hero-rule { margin-left: 0; }
+    .hero-sub { margin-left: 0; }
+
+    #space-to-think { height: 55vw; min-height: 280px; }
+    #lisbon { height: 55vw; min-height: 280px; }
+    #final-cta { min-height: auto; }
+    .final-cta-content { padding: 4rem 5%; }
+
+    .team-member .member-photo { width: 150px; height: 150px; }
+    .featured-quote { padding: 2rem; }
+    .possible-photo, .return-photo { aspect-ratio: 4/3; }
+
+    #you-return, #testimonials, .cta-dark-band, .specs-bar { box-sizing: border-box; width: 100%; }
+
+    /* Inline specs grid inside if-any-part - 2 columns on mobile */
+    #if-any-part > div:last-child {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Final CTA - full width left-aligned on mobile */
+    .final-cta-content {
+      padding: 3.5rem 5%;
+      max-width: 100%;
+    }
+
+    /* Portugal inner on mobile */
+    .portugal-inner { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="dash"></span>
+      <span>Portugal &nbsp;·&nbsp; Early October 2026</span>
+    </div>
+    <h1 class="hero-title">This is<br>your time.</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Eight days walking in Portugal — to step back, hear yourself, and choose what comes next.</p>
+    <a href="YOUR-WAITLIST-LINK-HERE" class="btn btn-white">Join the Waitlist</a>
+    <p class="hero-footnote">Small group &nbsp;·&nbsp; One departure</p>
+  </div>
+</section>
+
+<!-- ══ 2. SOMETHING IS CHANGING ══ -->
+<section id="changing">
+  <div class="split-layout">
+    <div class="split-text">
+      <h2>Something is changing</h2>
+      <p>Children growing up.<br>
+      Careers evolving or no longer fitting in the same way.<br>
+      Parents needing more.<br>
+      Or simply a sense that something is changing.</p>
+      <p>And with that, a different kind of question emerges:</p>
+      <p><strong>What matters most to me now?</strong></p>
+      <p>How do I want to spend my time?<br>
+      What do I want this next chapter to look like?</p>
+      <p><strong>Not by default — but by design.</strong></p>
+      <p>And the women you'll walk with are asking the same questions.</p>
+      <p class="closing"><strong>And possibly — the most interesting chapter yet.</strong></p>
+    </div>
+    <div class="split-img">
+      <img src="iStock-1443543015.jpg" alt="Woman looking outward with hope">
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. ON YOUR OWN TERMS (green) ══ -->
+<section id="intention">
+  <span class="label label-light">On your own terms</span>
+  <div style="width:36px;height:1px;background:rgba(255,255,255,0.4);margin:1rem auto 1.75rem;"></div>
+  <h2>This chapter deserves the same intention you gave everything else.</h2>
+  <p>You didn't build your life by accident. You made choices, worked hard, and created something real.</p>
+  <p>And now this chapter asks something different — not because you're starting over, but because what carried you here won't necessarily carry you forward.</p>
+  <p class="pull-quote"><strong>This is not a stage to drift into.</strong><br>It's a moment to decide: what do I want this next chapter to actually feel like?</p>
+  <p style="margin-top:1.5rem;">The women who get the most from this are often the ones who almost didn't come. Who wondered whether they could justify it — whether it was the right time.</p>
+  <p>It rarely feels like the right time. And choosing to hear yourself think, after years of making space for everyone else, isn't indulgent. <strong>It's necessary.</strong></p>
+</section>
+
+<!-- ══ 4. WHY WALKING (full bleed) ══ -->
+<section id="walking">
+  <div class="walking-photo-full">
+    <img src="Walking through the Portuguese countryside (1).png" alt="Women walking together in Portugal">
+  </div>
+  <div class="walking-text">
+    <h2>Why walking</h2>
+    <p>There's something about walking that loosens things.</p>
+    <p>Without the pressure of eye contact, without distractions, ideas surface more honestly — and what matters most becomes clearer than it does at a desk or in a meeting room.</p>
+    <p>In conversation with other women who are asking the same kinds of questions, you begin to see your own life differently.</p>
+    <p><strong>This is where clarity begins.</strong></p>
+    <p><em>And sometimes, the answer arrives halfway through a conversation you didn't expect to have.</em></p>
+  </div>
+</section>
+
+<!-- ══ 5. WHY I CREATED THIS ══ -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-img">
+      <img src="ChatGPT Image Mar 28, 2026, 04_38_12 PM.png" alt="Woman journaling outdoors in Portugal">
+    </div>
+    <div class="why-text">
+      <span class="label">Why this retreat exists</span>
+      <h2>Why I created this</h2>
+      <p>Because there comes a point when simply keeping everything moving is no longer enough — when the question shifts from <em>how do I do more,</em> to <em>what actually matters now.</em></p>
+      <p><strong>Clarity rarely comes from pushing harder.</strong> It comes when you create enough distance to hear yourself again.</p>
+      <div class="blockquote">
+        "I created space for slower mornings, unhurried walking, and conversations that go somewhere real — not to give you answers, but to create the conditions for your own to emerge."
+      </div>
+      <div class="four-pillars">
+        <div class="pillar"><span class="label">Place</span><p>Portugal — a country that understands transition. Beautiful, unhurried, and slow enough that something in you begins to settle.</p></div>
+        <div class="pillar"><span class="label">Pace</span><p>Deliberately unhurried. Slow enough that you stop performing and start actually thinking.</p></div>
+        <div class="pillar"><span class="label">People</span><p>A small group of women at a similar point — thoughtful, capable, and ready to be honest about what's next.</p></div>
+        <div class="pillar"><span class="label">Purpose</span><p>Not answers handed to you — but the conditions for your own to emerge. Conversations that go somewhere real.</p></div>
+      </div>
+      <p class="why-closing">Not a fixed plan.<br>But the beginning of one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. A NOTE FROM JANE ══ -->
+<section id="jane-story">
+  <div class="story-inner">
+    <span class="label" style="text-align:center;display:block;">A note from Jane</span>
+    <h2>The idea had never once occurred to me — until someone showed me it was possible.</h2>
+    <p>In 2010 I left my employee job to become a contractor. I was done with the politics, done with career paths that didn't interest me, done with the slow grind of other people's agendas. I wanted out — and contracting felt like freedom.</p>
+    <p>For the first two years, I worked more hours than I ever had as an employee.</p>
+    <hr>
+    <p class="story-pull">It wasn't until my boys were growing up that I felt it — that specific lump in the throat that tells you something matters.</p>
+    <hr>
+    <p>I'd been searching for summer camps for them. Wonderful outdoor ones, a world away from hockey arenas. And realized, somewhere in the scrolling, that I didn't want to drop them off.</p>
+    <p><em>I wanted those summers with them.</em></p>
+    <p>So we started looking. We researched regions, compared tent trailers, scrolled through vacation rentals, and eventually wandered into properties for sale. That's when we found a cabin on Lake Okanagan. The kind of place that makes the decision for you. We bought it before I had a plan. Before I'd asked anyone's permission. In an industry where two consecutive weeks off was considered career limiting. I had just purchased a summer.</p>
+    <div class="story-photo">
+      <img src="IMG_0436 (1).JPG" alt="Family on Lake Okanagan">
+    </div>
+    <p>What pushed me over the edge was a conversation with a fellow contractor. She was taking the whole summer off. 'I have horses,' she said, as if it were the most obvious thing in the world.</p>
+    <p>I have kids.</p>
+    <p>I asked my boss. A long pause. Then, carefully: 'Will you come back in the fall?'</p>
+    <p>What I hadn't understood until that moment was simple: as a contractor, my value was in what I delivered, not when I showed up. The project was winding down. Starting the next one in September rather than June wasn't a problem — it was just a conversation I'd never thought to have.</p>
+    <p><strong>The choice had been mine the entire time.</strong> I just hadn't known it.</p>
+    <p>We kept that cabin for fourteen years. Fourteen summers on the lake with my boys. It was the best thing we ever did for our family — and none of it would have happened if someone hadn't shown me, casually and without fanfare, that a different choice was simply an option.</p>
+    <div class="story-sign">
+      <hr>
+      <span class="cursive">— Jane Iannacone</span>
+      <span class="attribution">Retreat Founder</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. JANE'S CLIMAX (full-width dark band) ══ -->
+<div style="background:var(--charcoal);padding:3rem 5%;text-align:center;">
+  <div style="max-width:680px;margin:0 auto;">
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;line-height:1.35;font-weight:400;margin-bottom:0.75rem;">I had the power all along.<br>Like Dorothy and her ruby slippers.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.2rem);color:rgba(255,255,255,0.65);line-height:1.6;margin-bottom:0;">That's what I hope this retreat does for you.</p>
+  </div>
+</div>
+
+<!-- ══ 6b. THIS STORY IS WHY (dark band CTA) ══ -->
+<div class="cta-dark-band">
+  <p>This story is why this retreat exists. If it resonated — you're exactly who it's for.</p>
+  <a href="YOUR-WAITLIST-LINK-HERE" class="btn btn-light">Join the Waitlist</a>
+  <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;font-style:italic;font-family:'Cormorant Garamond',serif;">No obligation. Just first access.</p>
+</div>
+
+<!-- ══ 7. THE TEAM ══ -->
+<section id="team">
+  <span class="label" style="text-align:center;display:block;">The team</span>
+  <p class="team-intro">This retreat is a collaboration between two people who each bring something essential — one designs what happens inside, the other designs everything that moves.</p>
+  <div class="team-grid">
+    <div class="team-member">
+      <div class="member-photo"><img src="101-kZk8zG1OEcQ.jpg" alt="Jane Iannacone"></div>
+      <h3>Jane Iannacone</h3>
+      <span class="member-title">Retreat Founder &nbsp;·&nbsp; Program Director</span>
+      <p>For more than twenty years, Jane has helped business owners and leadership teams step back, ask better questions, and find clarity when navigating change. Since 2014 she has designed and led retreats for women entrepreneurs and leadership teams — and she knows how to create the kind of room where people surprise themselves.</p>
+      <p>Over the course of the journey, Jane creates moments of reflection — a question shared over breakfast, a thought offered between landscapes. Nothing formal. Nothing required. Just the right question at the right moment.</p>
+    </div>
+    <div class="team-member">
+      <div class="member-photo"><img src="lystra.jpg" alt="Lystra Germaine Sam"></div>
+      <h3>Lystra Germaine Sam</h3>
+      <span class="member-title">Founder, Qmooniti Travel &nbsp;·&nbsp; In-Country Lead</span>
+      <p>Based in Vancouver and travelling with us in Portugal, Lystra designs and leads the entire travel experience — accommodations, routes, transfers, and local hosts, coordinated with calm precision.</p>
+      <p>Through Qmooniti, she curates travel grounded in cultural reciprocity — ensuring every encounter honours place, supports the local economy, and reflects Portugal as it actually lives. She isn't managing this from a distance. She travels with you.</p>
+    </div>
+  </div>
+  <div class="team-closing">
+    <p>You bring yourself. We take care of the rest.</p>
+    <span class="sub">Between us, you are held from both directions — the inner journey and the outer one.</span>
+  </div>
+</section>
+
+<!-- ══ 9. MORE THAN REFLECTION ══ -->
+<section id="different">
+  <span class="label" style="text-align:center;display:block;">What makes this different</span>
+  <h2>More than reflection.<br>A way forward.</h2>
+  <div class="different-grid">
+    <div class="different-img">
+      <img src="1407982777 (2).jpg" alt="Two women in deep conversation">
+    </div>
+    <div class="different-text">
+      <p>Most retreats give you space to breathe. This one gives you that — and something more.</p>
+      <p>Each day has a lens — a simple, practical prompt drawn from twenty years of helping people think clearly about what matters. Shared briefly in the morning. Explored over kilometres of Portuguese landscape. And at the end of the day, over a relaxed dinner, there's space to share what struck you — no pressure, just good conversation among women who've been thinking about the same things.</p>
+      <p>The tools are practical, not therapeutic. The conversations are real, not required. And what you produce alongside other women who are asking the same questions is something you simply couldn't have built alone.</p>
+      <div class="blockquote">
+        For example, one day's lens might be <em>headwinds and tailwinds</em> — the forces currently moving you forward, and the ones holding you back. A simple idea. A profound conversation, when explored with women who are asking the same questions.
+      </div>
+    </div>
+  </div>
+  <div class="happiness-plan">
+    <p>Think of it as a personal happiness plan.<br>Built by you. Shaped by Portugal.</p>
+  </div>
+</section>
+
+<!-- ══ 10. IF ANY PART OF THIS (dark band) ══ -->
+<div class="cta-dark-band" id="if-any-part">
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;max-width:700px;margin:0 auto 1rem;line-height:1.2;">If any part of this feels like it's for you — trust that feeling.</h2>
+  <p>One departure. Early October. A small group of women, each here by choice. If this is calling you — that matters. Full details and investment shared first with waitlist members. No obligation — just first access. <strong>This is not a trip you plan. It's one you surrender to.</strong></p>
+  <a href="YOUR-WAITLIST-LINK-HERE" class="btn btn-light" style="margin-top:0.5rem;">Join the Waitlist</a>
+  <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;font-style:italic;font-family:'Cormorant Garamond',serif;">Early inquiries welcomed &nbsp;·&nbsp; One departure</p>
+
+  <!-- Specs bar directly underneath -->
+  <div style="margin-top:2.5rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:2rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:900px;margin-left:auto;margin-right:auto;">
+    <div style="text-align:center;"><span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;display:block;margin-bottom:0.35rem;">Duration</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300;">Eight days</span></div>
+    <div style="text-align:center;"><span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;display:block;margin-bottom:0.35rem;">Group size</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300;">Intentionally small</span></div>
+    <div style="text-align:center;"><span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;display:block;margin-bottom:0.35rem;">Location</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300;">Portugal</span></div>
+    <div style="text-align:center;"><span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;display:block;margin-bottom:0.35rem;">Departure</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300;">Early October 2026</span></div>
+    <div style="text-align:center;"><span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:500;display:block;margin-bottom:0.35rem;">Investment</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:300;">Details shared with waitlist</span></div>
+  </div>
+</div>
+
+<!-- ══ 11. SPACE TO THINK (full bleed terrace) ══ -->
+<section id="space-to-think">
+  <img src="Terrace (1).png" alt="Candlelit terrace at dusk">
+  <div class="space-overlay">
+    <div>
+      <h2>Space to think.<br>The right people around you.<br>And a clear way forward.</h2>
+      <p>Eight days in Portugal — intentional, well held, and entirely yours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 12. WHAT EIGHT DAYS LOOKS LIKE ══ -->
+<section id="eight-days">
+  <span class="label" style="text-align:center;display:block;">What eight days looks like</span>
+  <h2>Not a schedule. Not a performance. A rhythm — shaped around the kind of space that lets something shift.</h2>
+  <div class="day-cards">
+    <div class="day-card"><span class="card-label">Morning</span><h3>Slow and unhurried</h3><p>Mornings belong to you — coffee, a quiet start, the day's lens shared simply over breakfast. No agenda until you're ready for one.</p></div>
+    <div class="day-card"><span class="card-label">Day</span><h3>Walking and conversation</h3><p>Guided walks through Portugal's landscape — side by side, without the pressure of eye contact. Ideas surface. Conversations deepen. By mid-afternoon, you're thinking about things you didn't know you needed to think about.</p></div>
+    <div class="day-card"><span class="card-label">Evening</span><h3>Shared and unhurried</h3><p>Unhurried meals, good wine, conversations that go somewhere real. The kind of evenings you don't want to end.</p></div>
+  </div>
+  <hr class="section-rule">
+  <div class="details-grid">
+    <div class="detail-item"><span class="detail-label">· Two places to truly settle in</span><p>You'll stay in two carefully chosen locations — so you can arrive, exhale, and feel at ease rather than constantly moving on. Each place has been selected for its atmosphere, its access to walking, and its quiet, restorative character.</p></div>
+    <div class="detail-item"><span class="detail-label">· Walking that creates space to think</span><p>Five days of guided walking — not for performance, but for the kind of rhythm where clarity begins to emerge. Side by side, without the pressure of eye contact, conversation goes somewhere it rarely does.</p></div>
+    <div class="detail-item"><span class="detail-label">· The kind of moments you don't plan</span><p>Some evenings unfold at our hotel base — seasonal meals, regional wines, and time to linger at the table. At times, a private chef prepares dinner; on others, we venture out to local restaurants where Portugal reveals itself slowly. Cultural encounters are woven into the days — with local makers, historians, and guides who bring each place to life.</p></div>
+    <div class="detail-item"><span class="detail-label">· Everything taken care of — so you don't have to hold it all together</span><p>For once, you don't have to hold it all together. No planning, no coordinating, no thinking three steps ahead. You simply arrive — and everything is already in place.</p></div>
+  </div>
+  <div class="testimonial-block">
+    <p class="quote-text">"All of a sudden I felt open and ready — removed from my usual environment, in this calm space with good food and good company."</p>
+    <p class="quote-attr">— Joan W., Retreat Participant</p>
+  </div>
+</section>
+
+<!-- ══ 14. YOU RETURN WITH MORE THAN MEMORIES (sage) ══ -->
+<div style="position:relative;width:100%;min-height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+  <img src="iStock-2223801736.jpg" alt="Woman looking out over the Douro Valley, Portugal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(20,16,10,0.62) 0%, rgba(20,16,10,0.38) 55%, rgba(20,16,10,0.15) 100%);"></div>
+  <div style="position:relative;z-index:2;text-align:center;padding:5rem 5%;">
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;line-height:1.4;font-weight:400;max-width:680px;margin:0 auto;">What shifts in Portugal doesn't stay in Portugal.</p>
+  </div>
+</div>
+<section id="you-return">
+  <span class="label label-sage" style="text-align:center;display:block;">What you leave with</span>
+  <h2>You return with more than memories.</h2>
+  <p class="sub">You return with something to carry into what comes next.</p>
+  <div class="return-cards">
+    <div class="return-card"><span class="num">01</span><h3>Clarity on what matters now</h3><p>A genuine understanding of what brings you meaning, satisfaction, and joy — not as an abstract idea, but as something you can name.</p></div>
+    <div class="return-card"><span class="num">02</span><h3>A clearer sense of what's opening up</h3><p>A clearer sense of which possibilities truly fit who you are now — not who you were, or who others need you to be.</p></div>
+    <div class="return-card"><span class="num">03</span><h3>Greater trust in your own choices</h3><p>The confidence that comes from having listened to yourself, deeply and without distraction, for eight whole days.</p></div>
+  </div>
+  <div class="return-photo">
+    <img src="copy iStock-1043661892.jpg" alt="Women laughing together">
+  </div>
+  <div class="return-cards">
+    <div class="return-card"><span class="num">04</span><h3>A personal happiness plan</h3><p>Clear priorities and concrete next steps — not rigid, but real. A framework that feels genuinely yours, built over eight days in Portugal.</p></div>
+    <div class="return-card"><span class="num">05</span><h3>A circle you carry forward</h3><p>Women who walk, think, and share like this together don't easily lose each other. After Portugal, the group stays connected in a shared space.</p></div>
+    <div class="return-card"><span class="num">06</span><h3>Something to take home</h3><p>A set of simple frameworks and your own notes from eight days of thinking — a personal record of what surfaced, what shifted, and what you want to carry forward.</p></div>
+  </div>
+</section>
+
+<!-- ══ 15. FROM WOMEN WHO'VE BEEN IN THE ROOM ══ -->
+<section id="testimonials">
+  <!-- Dark intro band -->
+  <div style="background:var(--charcoal);padding:3.5rem 5%;text-align:center;">
+    <span class="label label-light" style="margin-bottom:1.5rem;">From women who've been in the room</span>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.4rem);color:rgba(255,255,255,0.88);max-width:720px;margin:1.5rem auto 0.75rem;line-height:1.6;">The walk-and-talk format in Portugal is new. The work — helping women find clarity, direction, and permission to choose differently — is something Jane has been doing for over a decade. There will also be laughter — because when thoughtful women gather without hurry, warmth and humour tend to follow.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,0.7);margin-top:1rem;">Here's what some of those women have said.</p>
+  </div>
+  <!-- Testimonials on light background -->
+  <div style="background:var(--parchment);padding:4rem 5%;">
+    <div class="featured-quote">
+      <span class="methodology-badge">On the Methodology</span>
+      <p>Jane asks really, really good questions. It really made me dig deep and think about a lot of things — things that hadn't even crossed my mind, or that I hadn't been putting enough emphasis on. I found it really useful.</p>
+      <div class="attr">
+        <div class="attr-avatar">L</div>
+        <div><div class="attr-name">Lorena K.</div><div class="attr-role">Retreat participant</div></div>
+      </div>
+    </div>
+    <div class="mini-quotes">
+      <div class="mini-quote">
+        <p>"Jane's facilitation style is wonderfully well-planned — and she brings a lovely sense of humour and attention to detail into every aspect of her work. We love working with her."</p>
+        <div class="attr"><div class="attr-avatar">R</div><div><div class="attr-name">Raya C.</div><div class="attr-role">Retreat participant</div></div></div>
+      </div>
+      <div class="mini-quote">
+        <p>"The sense of community was the most powerful part for me. Being with other women who understood what I was experiencing made everything feel less overwhelming, and I left feeling more confident and clearer about what comes next."</p>
+        <div class="attr"><div class="attr-avatar">N</div><div><div class="attr-name">Nicole N.</div><div class="attr-role">Retreat participant</div></div></div>
+      </div>
+      <div class="mini-quote">
+        <p>"Being part of this experience reminded me I wasn't alone. The connection with other women, the perspective I gained, and the confidence I left with made it deeply meaningful."</p>
+        <div class="attr"><div class="attr-avatar">N</div><div><div class="attr-name">Nicole P.</div><div class="attr-role">Retreat participant</div></div></div>
+      </div>
+    </div>
+    <div class="testimonials-cta">
+      <p>This is the first time Jane is offering this retreat format — walking, reflecting, and planning in Portugal. The women who join will shape what this becomes. If what you've read here resonates, you're exactly who this is for.</p>
+      <a href="YOUR-WAITLIST-LINK-HERE" class="btn btn-dark">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTO TRIO ══ -->
+<section id="photo-trio" style="background:var(--parchment);padding:3rem 5%;">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;max-width:1100px;margin:0 auto;">
+    <div style="border-radius:2px;overflow:hidden;aspect-ratio:4/5;">
+      <img src="iStock-1434996361.jpg" alt="Women laughing together" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="border-radius:2px;overflow:hidden;aspect-ratio:4/5;">
+      <img src="iStock-1469759604.jpg" alt="Group of women on the waterfront" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="border-radius:2px;overflow:hidden;aspect-ratio:4/5;">
+      <img src="iStock-2156783104.jpg" alt="Woman looking out over Lisbon rooftops" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- ══ 16. FAQ ══ -->
+<section id="faq">
+  <span class="label">Before you ask</span>
+  <h2>Your questions, answered.</h2>
+  <p class="faq-intro">Here are the things most women want to know before they take the next step.</p>
+  <div class="faq-grid">
+
+    <div class="faq-item-full">
+      <h3>Is this retreat right for me?</h3>
+      <p>The women who come on this retreat have built full lives. They're thoughtful, curious, and genuinely good company — drawn to depth, to conversations that go somewhere, and to people who expand their thinking.</p>
+      <p>They show up open and willing — quirks, contradictions, and all. And they tend to find, somewhere over the eight days, that they're more themselves than they've been in a long time.</p>
+      <p>There will be a lot of laughter. The easy, unguarded kind — because when women feel genuinely comfortable, they stop editing themselves. The stories get funnier, the observations sharper, and it turns out to be really, really good fun.</p>
+      <p><em>If any of that sounds like you — it probably is.</em></p>
+    </div>
+
+    <div class="faq-item-full">
+      <h3>Is this a tour?</h3>
+      <p>This isn't for women who want a tour. It's for those who want an experience — the kind where, when you try to explain it afterwards, you find yourself smiling, reaching for the moments that moved you. A conversation that cracked something open. A laugh you didn't see coming. The wide-eyed feeling of finally figuring out something that matters.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Will I have my own room?</h3>
+      <p>Yes — every woman has her own private room. If you're attending with a friend and would prefer to share, a double occupancy option is available, which also comes with a cost saving. Either way, your accommodation is fully included in the investment.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What kind of places will we be staying?</h3>
+      <p>We stay in two carefully chosen properties — one near the Lisbon coast and one further into the Portuguese landscape. Depending on what best serves the experience, these may take the form of a boutique hotel, a farm stay, or an eco-luxury resort. What they share is character, comfort, and a genuine connection to the place and the people who live there.</p>
+      <p class="faq-lystra-note">This is where Lystra's philosophy comes to life. Through Qmooniti, every property is chosen not just for how it looks, but for what it represents — places that honour the local culture, support the surrounding community, and reflect Portugal as it actually lives rather than as it's packaged for visitors.</p>
+    </div>
+
+    <div class="faq-item-full">
+      <h3>Is it just walking, or are there other experiences?</h3>
+      <p>Walking is the spine of the experience — but the days are shaped by much more than that. We begin in Lisbon with a guided exploration of the city: its history, its neighbourhoods, its particular way of moving through time. Along the way, cultural encounters are woven into each day — with local makers, historians, and guides who bring the places we move through to life. Some evenings unfold over a private chef dinner featuring regional ingredients; others take us to local restaurants where Portugal reveals itself slowly.</p>
+      <p class="faq-lystra-note">Again, this is where Lystra's curation makes the difference. Every experience is chosen to be immersive rather than touristic — encounters that leave you with a felt sense of Portugal, not just a photograph of it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How much walking is involved? Do I need to be fit?</h3>
+      <p>Five days include guided walks. These are not performance walks — the pace is unhurried and routes are chosen for atmosphere and landscape, not difficulty. If a particular day doesn't feel right for you, there's no obligation to join every walk. This experience is shaped around you, not the other way around.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I come on my own?</h3>
+      <p>Most women do. The pre-trip gathering — held before departure — means you'll already know the women you're travelling with before you land in Lisbon. You arrive as part of a group, not as a stranger.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How many women will be in the group?</h3>
+      <p>The group is intentionally small — enough to feel like a genuine circle, small enough that everyone knows everyone by the end of day one. Exact numbers are confirmed with the full details shared to waitlist members.</p>
+      <p>The group size isn't a capacity limit — it's a design choice. It's the number where conversations go somewhere they can't in a larger group.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What are the dates?</h3>
+      <p>Final dates are confirmed with waitlist members once the itinerary is locked. What we can tell you now: the retreat takes place in early October 2026, and the group will be home by October 8th at the latest. If you're thinking about flights, that's your planning anchor.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is the investment?</h3>
+      <p>This is a fully curated, all-inclusive experience — private rooms, chef-prepared meals, local expert guides, and private transfers throughout, with Lystra on the ground with you every step of the way. Investment details, including the dual occupancy option, are shared first with waitlist members.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 17. THIS IS WHERE EIGHT DAYS BEGINS (full bleed Lisbon) ══ -->
+<section id="lisbon">
+  <img src="iStock-1164377875.jpg" alt="Lisbon rooftops and the Tagus river">
+  <div class="lisbon-overlay">
+    <div>
+      <h2>The right place, at the right moment in your life.</h2>
+      <p>Lisbon &nbsp;·&nbsp; Portugal &nbsp;·&nbsp; October 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLARITY. ENERGY. PERMISSION. ══ -->
+<section id="what-possible">
+  <span class="label" style="text-align:center;display:block;">What becomes possible</span>
+  <h2>Clarity. Energy. Permission.</h2>
+  <p class="sub-head">Three things that quietly return when women finally give themselves space to pause.</p>
+  <div class="possible-photo">
+    <img src="copy iStock-1460151613.jpg" alt="Woman sitting peacefully in sunlight">
+  </div>
+  <div class="possible-cards">
+    <div class="possible-card"><span class="card-label">Clarity</span><h3>Hearing your own thoughts again</h3><p>The kind that comes when you step outside the noise. What matters becomes simpler — and often, <strong>more obvious than you expected.</strong></p></div>
+    <div class="possible-card"><span class="card-label">Energy</span><h3>Not from doing more</h3><p>From being in a place that restores something in you — and in the company of women who expand your thinking. The kind of energy that comes from feeling <strong>lighter, freer, and fully present.</strong></p></div>
+    <div class="possible-card"><span class="card-label">Permission</span><h3>To want something for yourself</h3><p>To choose what brings meaning, satisfaction, and joy — <strong>without needing to justify it to anyone, including yourself.</strong></p></div>
+  </div>
+  <div class="possible-closing">
+    <p><em>And somewhere in that space, you begin to remember what feels like you.</em><br>This is what eight days in Portugal makes possible.</p>
+  </div>
+</section>
+
+<!-- ══ 18. YOU'VE READ THIS FAR (full bleed) ══ -->
+<section id="final-cta">
+  <div class="final-cta-bg">
+    <img src="copy iStock-1071461868.jpg" alt="Women dining together at golden hour">
+  </div>
+  <div class="final-cta-content">
+    <span class="label label-light" style="text-align:left;display:block;">One departure &nbsp;·&nbsp; Portugal &nbsp;·&nbsp; October 2026</span>
+    <h2>If this feels like your time, we would love to welcome you.</h2>
+    <div class="body-italic">This is an intentionally small group, created for women drawn to thoughtful travel, meaningful conversation, and the chance to reconnect with what matters most.</div>
+    <p class="body-normal">Full details, dates, and invitations will be shared first with those on the waitlist.</p>
+    <a href="YOUR-WAITLIST-LINK-HERE" class="btn btn-white">Join the Waitlist</a>
+    <p class="footnote">Early access to details. No obligation.</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER BAND ══ -->
+<div class="footer-band">
+  <p>"Full details, dates, and investment shared first with waitlist members."</p>
+  <span class="byline">Jane Iannacone &amp; Lystra Germaine Sam &nbsp;·&nbsp; Portugal 2026</span>
+</div>
+
+</body>
+</html>
