@@ -8,7 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
+#waitlist-form .formkit-submit {
+    background-color: #B5924A !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    border: none !important;
+  }
+  <style>
   :root {
     --parchment: #f5f0e8;
     --parchment-dark: #ede8de;
@@ -849,6 +855,17 @@
   <div style="max-width:580px;margin:0 auto;">
     <script async data-uid="a600e45426" src="https://jigsaw-performance.kit.com/a600e45426/index.js"></script>
   </div>
+<script>
+  var t = setInterval(function() {
+    var b = document.querySelectorAll('.formkit-submit');
+    if (b.length) {
+      b.forEach(function(el) {
+        el.style.cssText += 'background-color:#B5924A !important;color:#fff !important;border-radius:50px !important;border:none !important;';
+      });
+      clearInterval(t);
+    }
+  }, 200);
+</script>
   <p style="font-size:0.75rem;color:var(--text-light);margin-top:1.5rem;font-style:italic;font-family:'Cormorant Garamond',serif;">Early access to details. No obligation. Unsubscribe any time.</p>
 </section>
 
